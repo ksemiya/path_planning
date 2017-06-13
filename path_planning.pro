@@ -3,7 +3,7 @@ QT -= gui
 
 CONFIG += c++11
 
-TARGET = test_tinyxml_project
+TARGET = path_planning
 CONFIG += console
 CONFIG -= app_bundle
 
