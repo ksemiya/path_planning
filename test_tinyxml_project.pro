@@ -18,4 +18,6 @@ HEADERS += \
 DISTFILES += \
     comments.txt \
     test.xml \
-    TODO.txt
+    TODO.txt \
+    null.xml \
+    only_root.xml

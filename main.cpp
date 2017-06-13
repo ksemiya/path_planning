@@ -27,6 +27,7 @@ int main(int argc, char *argv[])
     if (pElement == nullptr) return XML_ERROR_PARSING_ELEMENT;
     std::string data;
     data = pElement->GetText();
+    if (data.c_str() == NULL) return XML_ERROR_PARSING_ELEMENT;
     std::cout << data << std::endl;
     return 0;
 }
