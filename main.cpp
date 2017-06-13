@@ -14,13 +14,20 @@ using namespace tinyxml2;
 
 int main(int argc, char *argv[])
 {
-    XMLDocument xmlDoc;
+    // TODO1
     std::string file_name;
     std::cin >> file_name;
+    // <----CREATE DOC---->
+    XMLDocument xmlDoc;
     XMLError eResult = xmlDoc.LoadFile(file_name.c_str());
     XMLCheckResult(eResult);
-    std::cout << file_name << std::endl;
-    std::cout << "Hello, world" << std::endl;
+    XMLNode * pRoot = xmlDoc.FirstChild();
+    if (pRoot == nullptr) return XML_ERROR_FILE_READ_ERROR;
+    XMLElement * pElement = pRoot->FirstChildElement("element");
+    if (pElement == nullptr) return XML_ERROR_PARSING_ELEMENT;
+    std::string data;
+    data = pElement->GetText();
+    std::cout << data << std::endl;
     return 0;
 }
 

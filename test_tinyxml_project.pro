@@ -17,4 +17,5 @@ HEADERS += \
 
 DISTFILES += \
     comments.txt \
-    test.xml
+    test.xml \
+    TODO.txt
