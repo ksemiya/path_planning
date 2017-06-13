@@ -14,3 +14,7 @@ SOURCES += main.cpp \
 
 HEADERS += \
     tinyxml2.h
+
+DISTFILES += \
+    comments.txt \
+    test.xml

@@ -1,0 +1,35 @@
+Well, do some comments here
+
+0. Some includes which may be useful:
+
+    #include <QCoreApplication>
+    #include <QTextStream>
+
+/*********************************/
+
+
+1. First of all, some reading from console with QTextStream
+
+        input:
+
+        QTextStream in(stdin);
+        QString value;
+        in >> value;
+
+        output:
+
+        QTextStream out(stdout);
+        out << value;
+        out << '\n';
+        out.flush();
+
+I'll figure out it later.
+upd: it became obvious that I'll use c++ string because of tinyxml which uses it.
+
+/*********************************/
+
+2. Secondly, wat? What it is, how does it work?
+
+    QCoreApplication app(argc, argv);
+    app.exit(0);
+    return (app.exec());

@@ -1,4 +1,3 @@
-#include <QCoreApplication>
 #include <assert.h>
 #include <cstdlib>
 #include <iostream>
@@ -15,10 +14,13 @@ using namespace tinyxml2;
 
 int main(int argc, char *argv[])
 {
-    QCoreApplication app(argc, argv);
-    std::string name_of_file = argv[1];
     XMLDocument xmlDoc;
-
+    std::string file_name;
+    std::cin >> file_name;
+    XMLError eResult = xmlDoc.LoadFile(file_name.c_str());
+    XMLCheckResult(eResult);
+    std::cout << file_name << std::endl;
     std::cout << "Hello, world" << std::endl;
     return 0;
 }
+
